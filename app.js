@@ -46,3 +46,6 @@ function listHabits(habit = [], habitsList){
 
 
 addHabits.addEventListener("submit", addHabit);
+
+
+listHabits(habits, habitsList);
