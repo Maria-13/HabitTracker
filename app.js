@@ -27,13 +27,15 @@ function listHabits(habit = [], habitsList){
     habitsList.innerHTML = habits.map((habit, i) => {
         return `
         <li>
-    <input type="checkbox" data-index=${i} id="habit${i}" ${habit.completed ? "checked" : ""
-} />
-    <label for = "habit${i}"><span>${habit.reps}/${habit.totalCount} ${habit.timeframe
-    } </span> ${habit.text}</label>
+        <input type="checkbox" data-index=${i} id="habit${i}" ${
+    habit.completed ? "checked" : ""
+  } />
+        <label for="habit${i}"><span>${habit.reps}/${habit.totalCounts} ${
+    habit.timeframe
+  }</span> ${habit.text}</label>
     <button class="delete" data-index=${i} id="delete${i}">Delete</button>
-</li>
-`;
+    </li>
+    `;
 })
 .join("");
 }
