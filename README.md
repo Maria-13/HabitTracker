@@ -1,5 +1,5 @@
 # HabitTracker
-UPD: this is a new iteration of the project which includes user's view after logging into the system and allows to create/add habits (with js queries). The calendar and steaks views are omitted as possible steps for future iterations.
+UPD: this is a new iteration of the project which includes user's view after logging into the system and allows to create/add habits (with js queries) or delete habits that are no longer needed. The calendar and steaks views are omitted as possible steps for future iterations.
 
 Problem statement: new habits can improve the quality of our lives and sometimes can change our life experience. However, it can be challenging to maintain new habits for a long period of time. When we're trying to set new habits, we have to deal with a lot of resistance. To make this easier, we need a feedback loop.
 
