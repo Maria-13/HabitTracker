@@ -42,12 +42,27 @@ function listHabits(habit = [], habitsList){
 
 
 // toggle if complete
+function toggleCompleted(e) {
+    if (!e.target.matches("input")) return;
+  const el = e.target;
+  const index = el.dataset.index;
+  habits[index].reps += 1;
 
+  if (habits[index].reps === habits[index].totalCounts) {
+    habits[index].completed = true;
+  } else if (habits[index].reps > habits[index].totalCounts) {
+    habits[index].reps = 0;
+    habits[index].completed = false;
+  }
+
+listHabits(habits, habitsList);
+localStorage.setItem("habits", JSON.stringify(habits));
+}
 
 // delete habit
 
 
 addHabits.addEventListener("submit", addHabit);
-
+habitsList.addEventListener("click", toggleCompleted);
 
 listHabits(habits, habitsList);
