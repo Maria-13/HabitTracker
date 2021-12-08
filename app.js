@@ -56,6 +56,7 @@ function toggleCompleted(e) {
   }
 
 listHabits(habits, habitsList);
+// saving it in the same browser
 localStorage.setItem("habits", JSON.stringify(habits));
 }
 
