@@ -1,7 +1,20 @@
+// Query selectors
+const themeBtn = document.querySelector('#theme');
+
 const addHabits = document.querySelector(".add-habit");
 const habitsList = document.querySelector(".habits");
 const habits = JSON.parse(localStorage.getItem("habits")) || [];
 
+// Function for theme toggling
+const ui = {
+  theme(){
+    themeBtn.classList.toggle('dark');
+    const root = document.querySelector(':root');
+    root.classList.toggle('dark');
+  }
+}
+    
+    
 // adding a habit
 function addHabit(e) {
     e.preventDefault();
@@ -71,6 +84,9 @@ function deleteHabit(e) {
     listHabits(habits, habitsList);
     localStorage.setItem("habits", JSON.stringify(habits));
   }
+
+// Event listeners
+themeBtn.addEventListener('click', ui.theme);
 
 addHabits.addEventListener("submit", addHabit);
 habitsList.addEventListener("click", toggleCompleted);
