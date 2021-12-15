@@ -23,7 +23,7 @@
 }
   
   body {
-    font-family: 'Montserrat', bold;
+    font-family: 'Nexa', bold;
     background-color: var(--primary);
     padding: var(--sm);
     display: grid;
