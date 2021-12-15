@@ -14,7 +14,6 @@ const ui = {
   }
 }
     
-    
 // adding a habit
 function addHabit(e) {
     e.preventDefault();
