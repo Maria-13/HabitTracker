@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 :root {
-  --primary: #F0FFFF;
-  --secondary: #006666;
-  --light: #f4f8f8;
+  --primary: #D8E3E7;
+  --secondary: #126E82;
+  --light: #51C4D3;
   --shadow: rgba(8, 47, 102, 0.12);
   --base: 1rem;
   --large: calc(var(--base) * 5);
@@ -16,16 +16,16 @@
 }
 
 :root.dark {
-  --primary: #031d46;
-  --secondary: #5200cc;
-  --light: #003074;
+  --primary: #2A0944;
+  --secondary: #A12568;
+  --light: #FEC260;
   --shadow: rgba(152, 174, 205, 0.05);
 }
   
   body {
     font-family: 'Montserrat', bold;
     background-color: var(--primary);
-    padding: var(--med);
+    padding: var(--sm);
     display: grid;
     place-items: center;
     color: var(--secondary);
@@ -85,24 +85,23 @@ h1 {
 }
 .habit-container {
   display: grid;
-  padding: var(--sm) var(--med);
+  padding: var(--sm) var(--sm);
   max-width: 400px;
-  grid-gap: 1rem;
-  background-color: #d3f8f6;
-  border-radius: 15px;
 }
+
   .habits {
-    display: grid;
     place-items: center;
     text-align: left;
   }
   
   .habits li {
-    border-bottom: 1px solid  #009999;
+    border-bottom: 1px solid var(--light)
     padding: 10px;
+    max-width: 400px;
+    place-items: center;
     font-weight: 400;
-    display: flex;
     align-items: center;
+    display: flex;
   }
   
   .habits label {
@@ -124,17 +123,17 @@ h1 {
   }
   
   .habits input + label span {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 0.75rem;
   }
   
   .habits input:checked + label {
     text-decoration: line-through;
-    color: rgb(121, 118, 118);
+    color: var(--light);
   }
   
   .habits button {
-    padding-left: 30px;
+    padding-left: 20px;
     background: none;
     margin: 5px;
     outline: 0;
@@ -149,12 +148,12 @@ h1 {
     align-items: center;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #006666;
+    border-bottom: 2px solid var(--light);
   }
   
   .add-habit input {
-    padding: 15px;
-    margin: 5px;
+    padding: 10px;
+    margin: 10px;
     outline: 0;
     border: 0;
     border-radius: 100px;
